@@ -21,7 +21,7 @@ public class ProdutoService {
         return repo.findById(id).get();
     }
 
-    public void delet(Integer id){
+    public void delete(Integer id){
         repo.deleteById(id);
     }
 }
