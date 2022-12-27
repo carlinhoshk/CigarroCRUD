@@ -13,11 +13,11 @@ public class ProdutoController {
 
     @Autowired
     private ProdutoService service;
-    @GetMapping("/produtos")
+    @GetMapping("/products")
     public List<Produto> list(){
         return service.listAll();
     }
-    @GetMapping("/produtos/{id}")
+    @GetMapping("/products/{id}")
     public ResponseEntity<Produto> get(@PathVariable Integer id){
         try {
             Produto produto = service.get(id);
@@ -26,12 +26,12 @@ public class ProdutoController {
             return new ResponseEntity<Produto>(HttpStatus.NOT_FOUND);
         }
     }
-    @PostMapping("/produtos")
+    @PostMapping("/products")
     public void add(@RequestBody Produto produto){
         service.save(produto);
     }
 
-    @PutMapping("/produtos/{id}")
+    @PutMapping("/products/{id}")
     public ResponseEntity<?> update(@RequestBody Produto produto,
         @PathVariable Integer id){
         try {
@@ -44,7 +44,7 @@ public class ProdutoController {
         }
     }
 
-    @DeleteMapping("/produtos/{id}")
+    @DeleteMapping("/products/{id}")
     public void delete(@PathVariable Integer id){
         service.delete(id);
     }

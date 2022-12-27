@@ -11,6 +11,8 @@ public class Produto {
     private String name;
     private float price;
 
+    private String imageUrl;
+
     public Produto() {
     }
     public Produto(Integer id, String name, float price){
@@ -43,5 +45,13 @@ public class Produto {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
