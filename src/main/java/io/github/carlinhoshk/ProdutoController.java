@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
+@CrossOrigin
 public class ProdutoController {
 
     @Autowired
